@@ -38,5 +38,5 @@ public class Usuario {
     Condominio condominio;
 
     @Column(nullable = false)
-    Boolean ativo;
+    boolean ativo;
 }

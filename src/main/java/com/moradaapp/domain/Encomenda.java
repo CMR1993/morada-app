@@ -33,7 +33,6 @@ public class Encomenda {
 
     private String descricao;
 
-    @Column(nullable = false)
     private LocalDateTime dataEntrega;
 
     @Column(nullable = false)

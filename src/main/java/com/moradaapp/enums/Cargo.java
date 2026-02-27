@@ -1,6 +1,6 @@
 package com.moradaapp.enums;
 
-public enum TipoFuncionario {
+public enum Cargo {
     PORTEIRO,
     ZELADOR,
     AUXILIAR
