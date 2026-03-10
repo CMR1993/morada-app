@@ -1,5 +1,7 @@
 package com.moradaapp.dto.condominio;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 
 public record CondominioRequestDTO(
 
@@ -9,7 +11,8 @@ public record CondominioRequestDTO(
         @NotBlank(message = "CNPJ é obrigatório")
         String cnpj,
 
-        @NotBlank(message = "Endereço é obrigatório")
-        String endereco
+        @NotNull(message = "Endereço é obrigatório")
+        @Valid
+        EnderecoDTO endereco
 ) {
 }

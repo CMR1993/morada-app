@@ -27,8 +27,8 @@ public class Condominio implements Serializable {
     @Column(nullable = false, unique = true)
     private String cnpj;
 
-    @Column(nullable = false)
-    private String endereco;
+    @Embedded
+    private Endereco endereco;
 
     private LocalDateTime dataCriacao;
 

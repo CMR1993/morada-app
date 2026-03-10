@@ -1,5 +1,6 @@
 package com.moradaapp.dto.condominio;
 
+import com.moradaapp.domain.Endereco;
 import java.time.LocalDateTime;
 
 public record CondominioResponseDTO(
@@ -7,7 +8,7 @@ public record CondominioResponseDTO(
         Long id,
         String nome,
         String cnpj,
-        String endereco,
+        EnderecoDTO endereco,
         LocalDateTime dataCriacao
 ) {
 }
