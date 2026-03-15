@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ApartamentoRepository extends JpaRepository <Apartamento, Long> {
+
+    void deleteByCondominioId(Long condominioId);
+
+    long countByCondominioId(Long condominioId);
 }

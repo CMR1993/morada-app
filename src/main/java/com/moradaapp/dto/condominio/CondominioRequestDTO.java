@@ -1,4 +1,5 @@
 package com.moradaapp.dto.condominio;
+import com.moradaapp.domain.EstruturaCondominio;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -13,6 +14,9 @@ public record CondominioRequestDTO(
 
         @NotNull(message = "Endereço é obrigatório")
         @Valid
-        EnderecoDTO endereco
+        EnderecoDTO endereco,
+
+        @Valid
+        EstruturaCondominio estrutura
 ) {
 }

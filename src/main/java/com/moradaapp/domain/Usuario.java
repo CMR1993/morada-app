@@ -37,6 +37,10 @@ public class Usuario {
     @JoinColumn(name = "condominio_id")
     Condominio condominio;
 
+    @ManyToOne
+    @JoinColumn(name = "apartamento_id")
+    private Apartamento apartamento;
+
     @Column(nullable = false)
     boolean ativo;
 }

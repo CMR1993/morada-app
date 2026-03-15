@@ -1,7 +1,10 @@
 package com.moradaapp.domain;
 
+import com.moradaapp.enums.TipoApartamento;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @EqualsAndHashCode(of = "id")
@@ -22,11 +25,14 @@ public class Apartamento {
     @Column(nullable = false)
     private String bloco;
 
-    @ManyToOne
+    @Enumerated(EnumType.STRING)
+    @Column(nullable = false)
+    private TipoApartamento tipo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "condominio_id", nullable = false)
     private Condominio condominio;
 
-    @ManyToOne
-    @JoinColumn(name = "usuario_id")
-    private Usuario morador;
+    @OneToMany(mappedBy = "apartamento")
+    private List<Usuario> moradores;
 }
