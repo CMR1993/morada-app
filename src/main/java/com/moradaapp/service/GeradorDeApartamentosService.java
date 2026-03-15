@@ -56,7 +56,7 @@ public class GeradorDeApartamentosService {
                 for (int c = 1; c <= coberturasPorBloco; c++) {
                     Apartamento cobertura = new Apartamento();
                     cobertura.setBloco("B" + bloco);
-                    cobertura.setNumero(String.format("%02d", c));
+                    cobertura.setNumero(String.format(andares + 1 + "%02d", c));
                     cobertura.setTipo(TipoApartamento.COBERTURA);
                     cobertura.setCondominio(condominio);
                     apartamentos.add(cobertura);
