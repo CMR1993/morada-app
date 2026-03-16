@@ -1,5 +1,6 @@
 package com.moradaapp.dto.funcionario;
 
+import com.moradaapp.enums.Cargo;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -19,8 +20,8 @@ public record FuncionarioRequestDTO(
         @NotBlank(message = "Email é obrigatório")
         String email,
 
-        @NotBlank(message = "Cargo é obrigatório")
-        String cargo,
+        @NotNull(message = "Cargo é obrigatório")
+        Cargo cargo,
 
         @NotNull(message = "Condomínio é obrigatório")
         Long condominioId
